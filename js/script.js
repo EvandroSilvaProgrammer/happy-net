@@ -101,18 +101,18 @@
 	
 	
 	//Header Search
-	if($('.search-box-outer').length) {
-		$('.search-box-outer').on('click', function() {
-			$('body').addClass('search-active');
-		});
-		$('.close-search').on('click', function() {
-			$('body').removeClass('search-active');
-		});
+	// if($('.search-box-outer').length) {
+	// 	$('.search-box-outer').on('click', function() {
+	// 		$('body').addClass('search-active');
+	// 	});
+	// 	$('.close-search').on('click', function() {
+	// 		$('body').removeClass('search-active');
+	// 	});
 		
-		$('.search-popup .color-layer').on('click', function() {
-			$('body').removeClass('search-active');
-		});
-	}
+	// 	$('.search-popup .color-layer').on('click', function() {
+	// 		$('body').removeClass('search-active');
+	// 	});
+	// }
 	
 	
 	

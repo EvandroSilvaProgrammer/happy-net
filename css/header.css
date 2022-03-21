@@ -854,7 +854,7 @@
 
 /* Search Box Outer */
 
-.main-header .search-box-outer{
+/* .main-header .search-box-outer{
 	position:relative;
 	float:left;
 	border-right:1px solid #999999;
@@ -877,7 +877,7 @@
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
-}
+} */
 
 .main-header .outer-box .nav-btn{
 	position:relative;

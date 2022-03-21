@@ -3711,7 +3711,7 @@
 
 /*Search Box Widget*/
 
-.sidebar .search-box .form-group{
+/* .sidebar .search-box .form-group{
 	position:relative;
 	margin:0px;
 }
@@ -3756,7 +3756,7 @@
 .sidebar .search-box .form-group input[type="text"]:focus,
 .sidebar .search-box .form-group input[type="search"]:focus{
 	border-color:var(--main-color);
-}
+} */
 
 /* Post Widget */
 

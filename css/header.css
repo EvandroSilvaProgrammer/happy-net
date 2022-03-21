@@ -270,7 +270,6 @@
 	padding:35px 0px;
 	font-size:var(--font-16);
 	color:var(--dark-color);
-	text-transform: capitalize;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -723,7 +722,6 @@
 	padding: 10px 20px;
 	font-size: 15px;
 	color: #404040;
-	text-transform: capitalize;
 }
 
 .mobile-menu .navigation li:hover > a,
@@ -804,7 +802,6 @@
 	padding: 10px 20px;
 	font-size: var(--font-16);
 	color: var(--dark-color);
-	text-transform: capitalize;
 }
 
 .main-header .mobile-menu .navigation li:hover > a,

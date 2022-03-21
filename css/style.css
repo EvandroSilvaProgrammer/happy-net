@@ -101,7 +101,6 @@
 	color:var(--main-color);
 	transform: translateX(180px);
 	transform-origin: top;
-	text-transform:uppercase;
 	-webkit-transition: all 1000ms ease;
 	-moz-transition: all 100ms ease;
 	-ms-transition: all 1000ms ease;
@@ -2322,7 +2321,6 @@
 	position:relative;
 	font-size:var(--font-14);
 	color:var(--main-color);
-	text-transform:uppercase;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -4109,7 +4107,6 @@
 	color:var(--dark-color-two);
 	font-weight:500;
 	margin-right:10px;
-	text-transform: capitalize;
 }
 
 .blog-detail .post-share-options .tags a{
@@ -4658,7 +4655,6 @@
 
 .contact-form .theme-btn{
 	cursor:pointer;
-	text-transform:uppercase;
 	margin-top:var(--margin-top-10);
 }
 
@@ -4673,7 +4669,6 @@
 	line-height:24px;
 	padding:5px 0px 0px;
 	margin:0px;
-	text-transform:uppercase;
 	font-size:12px;
 	color:#ff0000;
 	font-weight:500;	

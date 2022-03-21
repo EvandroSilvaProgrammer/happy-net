@@ -649,7 +649,6 @@ img{
 	text-align:center;
 	border-radius:4px;
 	padding: 14px 42px 14px;
-	text-transform: capitalize;
 	background-color:var(--main-color);
 }
 
@@ -699,7 +698,6 @@ img{
 	display: inline-grid;
 	padding: 13px 40px 13px;
 	font-size: var(--font-16);
-	text-transform: capitalize;
 	color: var(--white-color);
 	background-color:var(--main-color);
 }
@@ -758,7 +756,6 @@ img{
 	display: inline-grid;
 	padding: 13px 35px 13px;
 	font-size: var(--font-16);
-	text-transform: capitalize;
 	color: var(--main-color);
 	background-color:var(--white-color);
 }
@@ -817,7 +814,6 @@ img{
 	display: inline-grid;
 	padding: 13px 40px 13px;
 	font-size: var(--font-16);
-	text-transform: capitalize;
 	color: var(--white-color);
 	background-color:var(--main-color);
 }
@@ -876,7 +872,6 @@ img{
 	display: inline-grid;
 	padding: 13px 44px 13px;
 	font-size: var(--font-16);
-	text-transform: capitalize;
 	color: var(--white-color);
 	background-color:var(--main-color-two);
 }
@@ -987,7 +982,6 @@ img{
 	letter-spacing:1px;
 	color:var(--main-color);
 	font-size:var(--font-18);
-	text-transform:uppercase;
 	margin-bottom:var(--margin-bottom-15);
 }
 

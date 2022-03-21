@@ -57,10 +57,6 @@
 			e.preventDefault();
 		});
 		
-		$('.cart-box .dropdown-menu').click(function(e) {
-			e.stopPropagation();
-		});
-		
 	}
 	
 	

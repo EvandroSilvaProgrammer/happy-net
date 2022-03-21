@@ -22,10 +22,6 @@
 		font-size:var(--font-36);
 	}
 	
-	.cart-outer .table-outer{
-		overflow-x: auto;
-	}
-	
 	.shop-form .billing-inner,
 	.shop-detail-section .content-column .inner-column,
 	.sidebar-page-container .sidebar-side .sidebar,
@@ -271,10 +267,6 @@
 		order:2;
 	}
 	
-	.cart-table tbody tr .qty{
-		padding-right:15px;
-	}
-	
 }
 
 @media only screen and (max-width: 767px){
@@ -320,17 +312,6 @@
 	
 	.main-header .sticky-header .outer-box{
 		padding:35px 0px;
-	}
-	
-	.main-header .outer-box .cart-box .cart-panel{
-		left:0px !important;
-		right:auto;
-		margin-top:var(--margin-top-40);
-	}
-	
-	.main-header .sticky-header .outer-box .cart-box .cart-panel{
-		right:0px !important;
-		left:auto !important;
 	}
 	
 	.sidebar-page-container .comments-area .comment,
@@ -578,19 +559,6 @@
 		padding-right:var(--padding-right-20);
 	}
 	
-	.cart-section .apply-coupon .form-group{
-		margin-right:0px;
-		width:100%;
-	}
-	
-	.cart-section .apply-coupon .form-group input[type="text"]{
-		width:100%;
-	}
-	
-	.cart-section .totals-table .col{
-		width:50%;
-	}
-	
 }
 
 @media only screen and (max-width: 479px) {
@@ -635,10 +603,6 @@
 		margin-top:var(--margin-top-10);
 	}
 	
-	.main-header .sticky-header .outer-box .cart-box .cart-panel{
-		right:-62px !important;
-	}
-	
 	.main-footer .contact-info-list li{
 		margin-right:var(--margin-zero);
 	}
@@ -672,15 +636,6 @@
 	
 	.error-section h1{
 		font-size: var(--font-80);
-	}
-	
-	.cart-section .apply-coupon .form-group .theme-btn{
-		width:100%;
-		margin-bottom:var(--margin-bottom-15);
-	}
-	
-	.cart-section .totals-table .col{
-		font-size:16px;
 	}
 	
 	.shop-order-box{

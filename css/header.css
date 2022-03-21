@@ -379,10 +379,6 @@
 	opacity:1;
 }
 
-.main-header .sticky-header .main-menu .navigation > li > a:before{
-	
-}
-
 .main-header .main-menu .navigation > li > ul > li:hover > a{
 	padding-left:30px;
 	color:var(--white-color);

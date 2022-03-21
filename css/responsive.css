@@ -187,11 +187,6 @@
 		max-width:100%;
 	}
 	
-	.movie-page-section .feature-block,
-	.featured-section .feature-block{
-		width:33.3333%;
-	}
-	
 	.cta-section .title-column .inner-column{
 		text-align:center;
 	}
@@ -349,10 +344,6 @@
 		transform:translateY(0px);
 	}
 	
-	.movie-page-section .feature-block,
-	.featured-section .feature-block{
-		width:50%;
-	}
 	
 	h2{
 		font-size:var(--font-34);
@@ -587,12 +578,7 @@
 	.services-section .image-column .border-layer{
 		display:none;
 	}
-	
-	.movie-page-section .feature-block,
-	.featured-section .feature-block{
-		width:100%;
-	}
-	
+
 	.newsletter-form .form-group{
 		padding:var(--padding-zero);
 	}

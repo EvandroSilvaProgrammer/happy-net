@@ -640,27 +640,6 @@
     display: block;
 }
 
-.services-section .image-column .color-layer {
-    position: absolute;
-    left: -15px;
-    bottom: -15px;
-    right: 60px;
-    height: 100%;
-    background: url(../images/resource/service-pattern-layer.png) no-repeat;
-    background-size: cover;
-}
-
-.services-section .image-column .border-layer {
-    position: absolute;
-    left: 30px;
-    bottom: 40px;
-    right: 0px;
-    top: -25px;
-    z-index: 1;
-    background: url(../images/resource/service-border-layer.png) no-repeat;
-    background-size: cover;
-}
-
 .services-section .content-column {
     position: relative;
     margin-bottom: var(--margin-bottom-30);

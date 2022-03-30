@@ -98,7 +98,7 @@
     //Hidden Sidebar
     if ($('.hidden-bar,.fullscreen-menu').length) {
         var hiddenBar = $('.hidden-bar');
-        var hiddenBarOpener = $('.nav-toggler');
+        var hiddenBarOpener = $('.nav-toggler, #btn-read-more');
         var hiddenBarCloser = $('.hidden-bar-closer,.close-menu');
         $('.hidden-bar-wrapper').mCustomScrollbar();
 

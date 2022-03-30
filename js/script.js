@@ -21,10 +21,10 @@
             var HeaderHight = $('.main-header').height();
             if (windowpos >= HeaderHight) {
                 siteHeader.addClass('fixed-header');
-                scrollLink.fadeIn(300);
+                scrollLink.fadeIn();
             } else {
                 siteHeader.removeClass('fixed-header');
-                scrollLink.fadeOut(300);
+                scrollLink.fadeOut();
             }
 
         }

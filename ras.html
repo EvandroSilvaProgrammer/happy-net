@@ -1,0 +1,908 @@
+<!-- 
+# WhatsApp EasyForm - Versão 3.0 - Dezembro, 2021
+# Desenvolvedor: Gustavo Henrique Ribeiro
+# Contato - gustavoribeiro1011@gmail.com - Telefone/WhatsApp +5543996262702
+# Canal no Youtube: https://www.youtube.com/channel/UCNhMTC1yj-h5D3FALy_gy6g/
+-->
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- EasyForm Template CSS-->
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #212529;
+            padding-top: 370px;
+            padding-bottom: 30px;
+            margin: 0;
+        }
+        
+        .logo {
+            width: 100%;
+            top: 0;
+            padding: 30px 0 260px 0;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        @media (max-width: 767px) {
+            .logo {
+                position: relative;
+                padding: 0;
+            }
+            .logo img {
+                height: 180px;
+                max-width: 100%;
+            }
+            body {
+                padding-top: 0;
+                padding-bottom: 0;
+                margin: 0;
+            }
+        }
+        
+        .fab {
+            font-size: 1.4em;
+            margin-right: 6px;
+        }
+        
+        .formulario {
+            -webkit-box-shadow: -5px -3px 45px #C0C0C0;
+            -moz-box-shadow: -5px -3px 45px #C0C0C0;
+            box-shadow: -5px -3px 45px #C0C0C0;
+            margin: auto;
+            background-color: #F2F2F2;
+            padding: 20px;
+            color: #000;
+            max-width: 425px;
+            border-radius: 6px;
+            padding: 32px;
+            font-size: 1rem;
+            display: block;
+        }
+        
+        input[type="number"],
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 8px;
+            margin: 8px 0;
+            display: inline-block;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding: 8px;
+            font-size: 1rem;
+            border: 1px solid #000;
+            color: #000;
+            text-align: left;
+            font-family: Roboto, sans-serif;
+        }
+        
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        
+        input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+        
+        .radio {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .est1 {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .textHelp {
+            margin-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            color: red;
+        }
+        
+        .form-check {
+            display: flex;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        
+        button {
+            font-size: 1.4rem;
+            background-color: #FFF;
+            border: 0;
+            padding: 4px 30px;
+            color: #000;
+            border-radius: 4px;
+            cursor: pointer;
+            line-height: 50px;
+            margin-top: 16px;
+        }
+        
+        .botao-contato {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            background-color: rgb(41 182 101);
+            border: 0;
+            padding: 4px 30px;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            line-height: 50px;
+            margin-top: 16px;
+            vertical-align: middle;
+        }
+        
+        .botao-contato:hover {
+            background-color: rgb(29 142 77);
+            color: white;
+        }
+        
+        .span {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .btn-purchase {
+            background-color: rgb(41 182 101);
+            border-radius: 4px;
+            color: white;
+            font-weight: 700;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 7em;
+        }
+        
+        .btn-purchase:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <style>
+        .social {
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .share-btn {
+            display: inline-block;
+            color: #ffffff;
+            border: none;
+            padding: 0.5em;
+            width: 4em;
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+            outline: none;
+            text-align: center;
+        }
+        
+        .share-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .share-btn:active {
+            position: relative;
+            top: 2px;
+            box-shadow: none;
+            color: #e2e2e2;
+            outline: none;
+        }
+        
+        .link {
+            background-color: #343d46;
+        }
+        
+        .twitter {
+            background-color: #55acee;
+        }
+        
+        .youtube {
+            background-color: #dd4b39;
+        }
+        
+        .facebook {
+            background-color: #3B5998;
+        }
+        
+        .stumbleupon {
+            background-color: #444444;
+        }
+        
+        .reddit {
+            background-color: #FFA500;
+        }
+        
+        .linkedin {
+            background-color: #4875B4;
+        }
+        
+        .email {
+            background-color: #444444;
+        }
+        /* Código para botão com texto */
+        
+        .long-share-btn {
+            display: inline-block;
+            color: #ffffff;
+            border: none;
+            padding: 0.5em 1.5em;
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+            outline: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        
+        .long-share-btn:hover {
+            color: #eeeeee;
+        }
+        
+        .long-share-btn:active {
+            position: relative;
+            top: 2px;
+            box-shadow: none;
+            color: #e2e2e2;
+            outline: none;
+        }
+        
+        a.long-share-btn {
+            text-decoration: none;
+        }
+        
+        @media (max-width: 767px) {
+            .share-btn {
+                display: inline-block;
+                color: #ffffff;
+                border: none;
+                padding: 0.5em;
+                width: 3em;
+                box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+                outline: none;
+                text-align: center;
+                margin-bottom: 18px;
+            }
+        }
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/wef-favicon.ico" />
+    <title id="title_page"></title>
+</head>
+
+<body>
+    <div class="logo"></div>
+    <div class="formulario form-contato">
+        <h3 id="title_form"></h3>
+        <p>
+    </div>
+    <div class="formulario form-sucesso" style="display:none;"></div>
+
+    <!-- Social -->
+    <!-- Social -->
+    <div class="social">
+
+        <!-- Link -->
+        <a href="javascript: void(0)" class="share-btn link">
+            <i class="fa fa-link"></i>
+        </a>
+
+        <!-- Twitter -->
+        <a href="javascript: void(0)" class="share-btn twitter">
+            <i class="fa fa-twitter"></i>
+        </a>
+
+        <!-- Youtube -->
+        <a href="javascript: void(0)" class="share-btn youtube">
+            <i class="fa fa-youtube"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="javascript: void(0)" class="share-btn facebook">
+            <i class="fa fa-facebook"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="javascript: void(0)" class="share-btn linkedin">
+            <i class="fa fa-linkedin"></i>
+        </a>
+
+    </div>
+    <!-- Temas WhatsApp EasyForm -->
+    <div>
+        <a href="https://brscript.com/demo/whatsapp-easy-form/pt-br/classico/">Tema Clássico</a>
+        <a href="https://brscript.com/demo/whatsapp-easy-form/pt-br/"><b>Tema Cinza</b></a>
+        <a href="https://brscript.com/demo/whatsapp-easy-form/pt-br/azul/">Tema Azul</a>
+    </div>
+
+    <!-- Button Purchase -->
+    <div>
+        <a href="https://api.whatsapp.com/send?phone=5543996262702&amp;text=Tenho%20interesse%20em%20adquirir%20o%20WhatsApp%20EasyForm" class="btn-purchase" target="_blank">Adquirir script</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://kit.fontawesome.com/c8a127f596.js" crossorigin="anonymous"></script>
+    <!-- Wef -->
+    <script type="text/javascript" src="wef/jquery.mask.js"></script>
+    <script>
+        /* -----------------------------------------------------
+         *
+         * # Configuração
+         *
+         * -----------------------------------------------------
+         */
+        mobile = "244938165179"; //Ex. 551199999999 (DDI+DDD+SEUNUMERO)
+        openInNewWindow = "true"; // Abrir o WhatsApp em um nova janela
+        redirectMessage = "Você foi redirecionado para o WhatsApp para enviar uma mensagem. <br> <br> Entraremos em contato em breve! <br> <br> Obrigado";
+        title_page = "WhatsApp EasyForm"; //Título da página
+        title_form = "Demonstração de Formulário de Contato"; //Título do formulário
+        url_image = "img/wef-logo-default.png"; //Você pode substituir a imagem padrão por uma sua. (Medidas recomendadas: 700x300) 
+
+        asterisk_required = "true"; ///Mostrar asterisco para campos obrigatórios
+
+
+        /* -----------------------------------------------------
+         *
+         * # Inputs
+         *
+         * -----------------------------------------------------
+         */
+        input = "true"; // True/false para ativar/desativar campos do tipo Input
+        inputs = [{
+            id: 'nome',
+            label: 'Nome',
+            label_custom: '',
+            placeholder: 'Seu nome',
+            required: 'required',
+            type: 'text',
+            order: '1'
+        }, {
+            id: 'telefone',
+            label: 'Telefone',
+            label_custom: '',
+            placeholder: 'Seu telefone',
+            required: 'required',
+            type: 'text',
+            class: 'phone_with_ddd',
+            order: '3'
+        }, {
+            id: 'email',
+            label: 'E-mail',
+            label_custom: '',
+            placeholder: 'Seu e-mail',
+            required: 'required',
+            type: 'email',
+            order: '2'
+        }];
+
+        /* -----------------------------------------------------
+         *
+         * # Textarea
+         *
+         * -----------------------------------------------------
+         */
+        textarea = "true"; // True/false para ativar/desativar campos do tipo Textarea
+        textareas = [{
+                id: 'comentarios',
+                label: 'Comentários',
+                label_custom: '',
+                placeholder: "Comentários se houver",
+                required: '',
+                order: '6'
+            },
+
+        ];
+
+        /* -----------------------------------------------------
+         *
+         * # Checkbox
+         *
+         * -----------------------------------------------------
+         */
+        checkbox = "true"; // True/false para ativar/desativar campos do tipo Checkbox
+        checkboxs = [{
+            id: 'interesse',
+            label: "Interessado em",
+            label_custom: '',
+            options: ['Projeto', 'Produto'],
+            required: 'required',
+            order: '7'
+        }];
+
+        /* -----------------------------------------------------
+         *
+         * # Radio
+         *
+         * -----------------------------------------------------
+         */
+        radio = "true"; // True/false para ativar/desativar campos do tipo Radio
+        radios = [{
+            id: 'tipo-trabalho',
+            label: "Tipo de trabalho",
+            label_custom: '',
+            options: ['Projeto', 'Desenvolvimento'],
+            required: 'required',
+            order: '8'
+        }];
+
+        /* -----------------------------------------------------
+         *
+         * # Select
+         *
+         * -----------------------------------------------------
+         */
+        select = "true"; // True/false para ativar/desativar campos do tipo Select
+        selects = [{
+                id: 'plataforma',
+                label: "Plataforma",
+                label_custom: '',
+                first_option_select: "Selecionar...",
+                options: ["Web", "Mobile", "Web/Mobile"],
+                required: 'required',
+                order: '9'
+            }
+
+        ];
+
+        /* -----------------------------------------------------
+         *
+         * # Botão Enviar
+         *
+         * -----------------------------------------------------
+         */
+        button_name = "Enviar"; //Texto do botão Enviar
+    </script>
+    <script>
+        //Mask for Fields
+        $(document).ready(function() {
+            $('.date').mask('00/00/0000');
+            $('.time').mask('00:00:00');
+            $('.date_time').mask('00/00/0000 00:00:00');
+            $('.cep').mask('00000-000');
+            $('.phone').mask('0000-0000');
+            $('.phone_with_ddd').mask('(00) 00000-0000');
+            $('.phone_us').mask('(000) 000-0000');
+            $('.mixed').mask('AAA 000-S0S');
+            $('.cpf').mask('000.000.000-00', {
+                reverse: true
+            });
+            $('.cnpj').mask('00.000.000/0000-00', {
+                reverse: true
+            });
+            $('.money').mask('000.000.000.000.000,00', {
+                reverse: true
+            });
+            $('.money2').mask("#.##0,00", {
+                reverse: true
+            });
+            $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+                translation: {
+                    'Z': {
+                        pattern: /[0-9]/,
+                        optional: true
+                    }
+                }
+            });
+            $('.ip_address').mask('099.099.099.099');
+            $('.percent').mask('##0,00%', {
+                reverse: true
+            });
+            $('.clear-if-not-match').mask("00/00/0000", {
+                clearIfNotMatch: true
+            });
+            $('.placeholder').mask("00/00/0000", {
+                placeholder: "__/__/____"
+            });
+            $('.fallback').mask("00r00r0000", {
+                translation: {
+                    'r': {
+                        pattern: /[\/]/,
+                        fallback: '/'
+                    },
+                    placeholder: "__/__/____"
+                }
+            });
+            $('.selectonfocus').mask("00/00/0000", {
+                selectOnFocus: true
+            });
+        });
+
+        //Asterisk Fields
+        if (asterisk_required === "true") {
+            asterisk = "<span style='color:red;'>*</span>";
+        } else {
+            asterisk = "";
+        };
+    </script>
+    <script>
+        $("#title_page").html(title_page);
+        $("#title_form").html(title_form);
+        $(".logo").html('<img src="' + url_image + '" alt="Formulario WhatsApp - plugin jQuery" width="700px">');
+    </script>
+    <script>
+        result_fields = "";
+
+        //Input
+        if (input == "true") {
+            var arrayLengthInput = inputs.length;
+            result_input = "";
+            for (var i = 0; i < arrayLengthInput; i++) {
+                if (inputs[i].order[0]) {
+                    result_input += '<div data-sid="' + inputs[i].order + '" id="' + inputs[i].order + '">';
+                    result_input += '<label class="est1" ' + inputs[i].label_custom + '>' + inputs[i].label;
+                    result_input += '<span id="asterisk_input_' + inputs[i].id + '"></span></label>';
+                    result_input += '<input type="' + inputs[i].type + '" ';
+                    result_input += 'id="' + inputs[i].id + '"';
+                    result_input += 'placeholder="' + inputs[i].placeholder + '"';
+                    result_input += 'class="' + inputs[i].class + '"';
+                    result_input += 'required="' + inputs[i].required + '">';
+                    result_input += '<span id="help_input_' + inputs[i].id + '" class="textHelp"></span></label>';
+                    result_input += '</div>';
+                } else {
+                    alert('Defina uma ordem de exibição para input "' + inputs[i].label + '"');
+                }
+            }
+            result_fields += result_input;
+        }
+
+        //Textarea
+        if (textarea == "true") {
+            var arrayLengthTextArea = textareas.length;
+            result_textarea = "";
+            for (var i = 0; i < arrayLengthTextArea; i++) {
+                if (textareas[i].order[0]) {
+                    result_textarea += '<div data-sid="' + textareas[i].order + '" id="' + inputs[i].order + '">';
+                    result_textarea += '<label class="est1" ' + textareas[i].label_custom + '>' + textareas[i].label;
+                    result_textarea += '<span id="asterisk_textarea_' + textareas[i].id + '"></span></label>';
+                    result_textarea += '<textarea placeholder="' + textareas[i].placeholder + '" id="' + textareas[i].id + '"></textarea>';
+                    result_textarea += '</div>';
+
+                } else {
+                    alert('Defina uma ordem de exibição para textarea "' + textareas[i].label + '"');
+                }
+            }
+            result_fields += result_textarea;
+        }
+
+        //Checkbox
+        if (checkbox == "true") {
+            var arrayLengthCheckbox = checkboxs.length;
+            result_checkbox = "";
+            for (var i = 0; i < arrayLengthCheckbox; i++) {
+                if (checkboxs[i].order[0]) {
+                    result_checkbox += '<div data-sid="' + checkboxs[i].order + '" id="' + inputs[i].order + '">';
+                    result_checkbox += '<label class="est1" ' + checkboxs[i].label_custom + '>' + checkboxs[i].label;
+                    result_checkbox += '<span id="asterisk_checkbox_' + checkboxs[i].id + '"></span>';
+                    result_checkbox += '</label>';
+                    var arrayLengthCheckboxOptions = checkboxs[i].options.length;
+                    for (var x = 0; x < arrayLengthCheckboxOptions; x++) {
+                        result_checkbox += '<div class="est1">';
+                        result_checkbox += '<input type="checkbox"';
+                        result_checkbox += 'name="checkbox_' + checkboxs[i].id + '"';
+                        result_checkbox += 'value="' + checkboxs[i].options[x] + '">';
+                        result_checkbox += '<label>' + checkboxs[i].options[x] + '</label></div>';
+                    }
+                    result_checkbox += '</div>';
+                } else {
+                    alert('Defina uma ordem de exibição para checkbox "' + checkboxs[i].label + '"');
+                }
+            }
+            result_fields += result_checkbox;
+        }
+
+        //Radio
+        if (radio == "true") {
+            var arrayLengthRadio = radios.length;
+            result_radio = "";
+            for (var i = 0; i < arrayLengthRadio; i++) {
+                if (radios[i].order[0]) {
+                    result_radio += '<div data-sid="' + radios[i].order + '" id="' + inputs[i].order + '">';
+                    result_radio += '<label class="est1" ' + radios[i].label_custom + '>' + radios[i].label;
+                    result_radio += '<span id="asterisk_radio_' + radios[i].id + '"></span>';
+                    result_radio += '</label>';
+                    var arrayLengthRadioOptions = radios[i].options.length;
+                    for (var x = 0; x < arrayLengthRadioOptions; x++) {
+                        result_radio += '<div class="est1">';
+                        result_radio += '<input type="radio"';
+                        result_radio += 'id="radio_' + i + '"';
+                        result_radio += 'name="radio_' + radios[i].id + '"';
+                        result_radio += 'value="' + radios[i].options[x] + '"> <label>' + radios[i].options[x] + '</label></div>';
+                    }
+                    result_radio += '</div>';
+                } else {
+                    alert('Defina uma ordem de exibição para radio "' + radios[i].label + '"');
+                }
+            }
+            result_fields += result_radio;
+        }
+
+        //Select
+        if (select == "true") {
+            var arrayLengthSelect = selects.length;
+            result_select = "";
+            for (var i = 0; i < arrayLengthSelect; i++) {
+                if (selects[i].order[0]) {
+                    result_select += '<div data-sid="' + selects[i].order + '" id="' + inputs[i].order + '">';
+                    result_select += '<label class="est1" ' + selects[i].label_custom + '>' + selects[i].label;
+                    result_select += '<span id="asterisk_select_' + selects[i].id + '"></span>';
+                    result_select += '</label>';
+                    var arrayLengthSelectOptions = selects[i].options.length;
+                    result_select += '<select name="select_' + selects[i].id + '" id="select_' + selects[i].id + '">';
+                    result_select += '<option value="999">' + selects[i].first_option_select + '</option>';
+
+                    for (var x = 0; x < arrayLengthSelectOptions; x++) {
+                        result_select += '<option value="' + selects[i].options[x] + '">' + selects[i].options[x] + '</option>';
+                    }
+                    result_select += '</select></div>';
+
+                } else {
+                    alert('Defina uma ordem de exibição para select "' + selects[i].label + '"');
+                }
+            }
+            result_fields += result_select;
+        }
+
+        //Button
+        result_button = '<div data-sid="999" id="999">';
+        result_button += '<button class="botao-contato" id="submit">';
+        result_button += '<i class="fab fa-whatsapp"></i>' + button_name;
+        result_button += '</button>';
+        result_fields += result_button;
+
+        //Show fields
+        $("p").append("<div class='fields'>" + result_fields + "</div>");
+    </script>
+    <script>
+        //Validate e-mail
+        function isEmail(email) {
+            var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            return regex.test(email);
+        }
+
+        //Data formato brasileiro (dd/mm/yyyy)
+        function isDate(date) {
+            var dateformatted = date;
+            return dateformatted.replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
+        }
+
+        //Enter event click
+        $(document).on('keypress', function(e) {
+            if (e.which == 13) {
+                Submit();
+            }
+        });
+        //Click button submit
+        $("#submit").click(function() {
+            Submit();
+        });
+
+        //Submit
+        function Submit() {
+            var submit = "";
+            var text = "";
+
+
+            //Input
+            if (input === "true") {
+                var arrayLengthInput = inputs.length;
+                for (var i = 0; i < arrayLengthInput; i++) {
+                    var input_val = $("#" + inputs[i].id).val();
+                    if (inputs[i].required === 'required') {
+                        if (input_val.length === 0) {
+                            submit += "1";
+                            $("#asterisk_input_" + inputs[i].id).html("&nbsp;" + asterisk);
+                        } else {
+                            if (inputs[i].type === "email") {
+                                if (isEmail(input_val) === true) {
+                                    //email is valid
+                                    $("#help_input_" + inputs[i].id).html("");
+                                    submit += "0";
+                                } else {
+                                    //email is not valid				
+                                    submit += "1";
+                                    $("#help_input_" + inputs[i].id).html("Digite um e-mail válido");
+                                }
+                            } else if (inputs[i].type === "date") {
+                                submit += "0";
+                                text += inputs[i].label + ": " + isDate(input_val) + "\n";
+                            } else {
+                                $("#asterisk_input_" + inputs[i].id).html("");
+                                submit += "0";
+                                text += inputs[i].label + ": " + input_val + "\n";
+                            }
+                        }
+                    } else {
+                        if (inputs[i].type === "date") {
+                            submit += "0";
+                            text += inputs[i].label + ": " + isDate(input_val) + "\n";
+                        } else {
+                            var input_val = $("#" + inputs[i].id).val();
+                            submit += "0";
+                            text += inputs[i].label + ": " + input_val + "\n";
+                        }
+                    }
+                }
+            }
+
+
+            //Checkbox
+            if (checkbox === "true") {
+                checkbox_arr = "";
+                var arrayLengthCheckbox = checkboxs.length;
+                for (var i = 0; i < arrayLengthCheckbox; i++) {
+                    if (checkboxs[i].required === 'required') {
+                        var checkbox_leng = $('[name="checkbox_' + checkboxs[i].id + '"]:checked').length;
+                        if (checkbox_leng === 0) {
+                            submit += "1";
+                            $("#asterisk_checkbox_" + checkboxs[i].id).html("&nbsp;" + asterisk);
+                        } else {
+                            $("#asterisk_checkbox_" + checkboxs[i].id).html("");
+                            $('[name="checkbox_' + checkboxs[i].id + '"]:checked').map(function() {
+                                checkbox_arr += $(this).val() + ", ";
+                            }).get()
+                            submit += "0";
+                            text += checkboxs[i].label + ": " + checkbox_arr.substring(0, checkbox_arr.length - 2) + "\n";
+                        }
+                    } else {
+                        $('[name="checkbox_' + checkboxs[i].id + '"]:checked').map(function() {
+                            checkbox_arr += $(this).val() + ", ";
+                        }).get()
+                        submit += "0";
+                        text += checkboxs[i].label + ": " + checkbox_arr.substring(0, checkbox_arr.length - 2) + "\n";
+                    }
+                }
+            }
+
+
+            //Radio
+            if (radio === "true") {
+                radio_val = "";
+                var arrayLengthRadio = radios.length;
+                for (var i = 0; i < arrayLengthRadio; i++) {
+                    if (radios[i].required === 'required') {
+                        var radio_length = $('[name="radio_' + radios[i].id + '"]:checked').length
+                        if (radio_length === 0) {
+                            submit += "1";
+                            $("#asterisk_radio_" + radios[i].id).html("&nbsp;" + asterisk);
+                        } else {
+                            $("#asterisk_radio_" + radios[i].id).html("");
+                            $('[name="radio_' + radios[i].id + '"]:checked').map(function() {
+                                radio_val += $(this).val();
+                            }).get()
+                            submit += "0";
+                            text += radios[i].label + ": " + radio_val + "\n";
+                        }
+                    } else {
+                        $('[name="radio_' + radios[i].id + '"]:checked').map(function() {
+                            radio_val += $(this).val();
+                        }).get()
+                        submit += "0";
+                        text += radios[i].label + ": " + radio_val + "\n";
+                    }
+                }
+            }
+
+
+            //Textarea
+            if (textarea === "true") {
+
+                var arrayLengthTextarea = textareas.length;
+                for (var i = 0; i < arrayLengthTextarea; i++) {
+                    var textarea_val = $("#" + textareas[i].id).val();
+
+                    if (textareas[i].required === 'required') {
+                        if (textarea_val.length === 0) {
+                            submit += "1";
+                            $("#asterisk_textarea_" + textareas[i].id).html("&nbsp;" + asterisk);
+                        } else {
+                            $("#asterisk_textarea_" + textareas[i].id).html("");
+                            submit += "0";
+                            text += textareas[i].label + ": " + textarea_val + "\n";
+                        }
+                    } else {
+                        submit += "0";
+                        text += textareas[i].label + ": " + textarea_val + "\n";
+                    }
+                }
+            }
+
+            //Select
+            if (select === "true") {
+                var arrayLengthSelect = selects.length;
+                for (var i = 0; i < arrayLengthSelect; i++) {
+                    var select_val = $("#select_" + selects[i].id + " option:selected").val();
+                    if (selects[i].required === 'required') {
+                        if (select_val === '999') {
+                            submit += "1";
+                            $("#asterisk_select_" + selects[i].id).html("&nbsp;" + asterisk);
+                        } else {
+                            $("#asterisk_select_" + selects[i].id).html("");
+                            submit += "0";
+                            text += selects[i].label + ": " + select_val + "\n";
+                        }
+                    } else {
+                        submit += "0";
+                        text += selects[i].label + ": " + select_val + "\n";
+                    }
+                }
+            }
+            if ((parseInt(submit) + 0) === 0) {
+
+                var message = title_form + "\n\n";
+                message += text;
+
+                //alert(message);
+
+                message = window.encodeURIComponent(message);
+
+                if (openInNewWindow === "true") {
+
+                    blank = "_blank";
+                } else {
+                    blank = "_self";
+                }
+
+                window.open("https://wa.me/" + mobile + "?text=" + message, blank);
+
+                $("#title_form").css("display", "none");
+                $(".fields").css("display", "none");
+
+                $("p").append("<div>" + redirectMessage + "</div>");
+
+            } else {
+                alert("Por favor preencha todos os campos!");
+            }
+        }
+    </script>
+    <script>
+        //Sort
+        var fields = $('div.fields'),
+            field = fields.children('div');
+
+        field.detach().sort(function(a, b) {
+            var astts = $(a).data('sid');
+            var bstts = $(b).data('sid')
+            return (astts > bstts) ? (astts > bstts) ? 1 : 0 : -1;
+        });
+
+        fields.append(field);
+    </script>
+</body>
+
+</html>

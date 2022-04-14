@@ -41,7 +41,7 @@ inputs = [{
         label: 'E-mail',
         label_custom: '',
         placeholder: '',
-        required: 'required',
+        required: 'no-required',
         type: 'email',
         order: '5'
     }
@@ -53,7 +53,7 @@ textareas = [{
         label: 'Descrição do endereço',
         label_custom: '',
         placeholder: "",
-        required: '',
+        required: 'required',
         order: '6'
     },
 
@@ -61,7 +61,7 @@ textareas = [{
 
 $("#submit").click(function() {
     submit();
-    cleanInputs();
+    // cleanInputs();
 });
 
 function isEmail(email) {

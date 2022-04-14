@@ -1,6 +1,6 @@
 mobile = "244938165179";
 openInNewWindow = "true";
-title_form = "Saber se existe cobertura de sinal na minha zona | LP origin";
+title_form = "Mensagem enviada a partir do site";
 
 input = "true";
 inputs = [{
@@ -8,34 +8,29 @@ inputs = [{
     label: 'Nome',
     required: 'required',
     type: 'text',
-    order: '1'
 }, {
     id: 'phone',
     label: 'Telefone',
     required: 'required',
     type: 'text',
-    order: '2'
 }, {
     id: 'email',
     label: 'E-mail',
-    required: 'required',
+    required: 'no-required',
     type: 'email',
-    order: '5'
 }];
 
 textarea = "true";
 textareas = [{
         id: 'message',
         label: 'Mensagem',
-        required: '',
-        order: '6'
+        required: 'required',
     },
 
 ];
 
 $("#submit").click(function() {
     submit();
-    cleanInputs();
 });
 
 function isEmail(email) {
@@ -136,6 +131,6 @@ function submit() {
         window.open("https://wa.me/" + mobile + "?text=" + message, blank);
 
         alert("Você foi redirecionado para o WhatsApp para enviar a sua mensagem. \n \n Entraremos em contacto em breve, obrigado.");
-
+        cleanInputs();
     }
 }

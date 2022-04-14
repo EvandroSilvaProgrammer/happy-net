@@ -6,32 +6,24 @@ input = "true";
 inputs = [{
         id: 'username',
         label: 'Nome',
-        label_custom: '',
-        placeholder: '',
         required: 'required',
         type: 'text',
         order: '1'
     }, {
         id: 'phone',
         label: 'Telefone',
-        label_custom: '',
-        placeholder: '',
         required: 'required',
         type: 'text',
         order: '2'
     }, {
         id: 'county',
         label: 'Município',
-        label_custom: '',
-        placeholder: '',
         required: 'required',
         type: 'text',
         order: '3'
     }, {
         id: 'neighborhood',
         label: 'Bairro',
-        label_custom: '',
-        placeholder: '',
         required: 'required',
         type: 'text',
         order: '4'
@@ -39,8 +31,6 @@ inputs = [{
     {
         id: 'email',
         label: 'E-mail',
-        label_custom: '',
-        placeholder: '',
         required: 'no-required',
         type: 'email',
         order: '5'
@@ -51,8 +41,6 @@ textarea = "true";
 textareas = [{
         id: 'message',
         label: 'Descrição do endereço',
-        label_custom: '',
-        placeholder: "",
         required: 'required',
         order: '6'
     },
@@ -61,7 +49,6 @@ textareas = [{
 
 $("#submit").click(function() {
     submit();
-    // cleanInputs();
 });
 
 function isEmail(email) {
@@ -162,6 +149,6 @@ function submit() {
         window.open("https://wa.me/" + mobile + "?text=" + message, blank);
 
         alert("Você foi redirecionado para o WhatsApp para enviar a sua mensagem. \n \n Entraremos em contacto em breve, obrigado.");
-
+        cleanInputs();
     }
 }

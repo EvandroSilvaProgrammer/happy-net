@@ -94,9 +94,15 @@
 
                                 <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
+<<<<<<< HEAD
                                         <li class="dropdown"><a href="https://happy-net.vercel.app/">Início</a>
                                         </li>
                                         <li class="dropdown"><a href="https://happy-net.vercel.app/#pricing-section">Preços</a>
+=======
+                                        <li class="dropdown"><a href="index.html#">Início</a>
+                                        </li>
+                                        <li class="dropdown"><a href="index.html#pricing-section">Preços</a>
+>>>>>>> develop
                                         </li>
                                         <li class="dropdown"><a href="https://happy-net.vercel.app/#testimonial-section">Depoimentos</a>
                                         </li>
@@ -235,7 +241,7 @@
         <!-- Page Title -->
         <section class="page-title" style="background-image: url(images/background/10.jpg)">
             <div class="auto-container">
-                <h2>Coberturas</h2>
+                <h2>Cobertura</h2>
                 <ul class="bread-crumb clearfix">
                     <li><a href="https://happy-net.vercel.app/">Início</a></li>
                     <li>Cobertura</li>
@@ -316,45 +322,47 @@
 
                             <!-- Contact Form -->
                             <div class="contact-form">
-                                <form method="post" action="https://html.themexriver.com/nextbit/sendemail.php" id="">
+                                <!-- <form> -->
+                                <form action="#">
                                     <div class="row clearfix">
 
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <label for="">Nome</label>
-                                            <input type="text" name="username" placeholder="Digite o seu nome" required>
+                                            <input type="text" name="username" id="username" placeholder="Digite o seu nome" required>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <label for="">Telefone</label>
-                                            <input type="text" name="phone" placeholder="Digite o seu número de telefone" required>
+                                            <input type="text" name="phone" id="phone" placeholder="Digite o seu número de telefone" required>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <label for="">Município</label>
-                                            <input type="text" name="phone" placeholder="Digite aqui o município onde reside" required>
+                                            <input type="text" name="county" id="county" placeholder="Digite aqui o município onde reside" required>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <label for="">Bairro</label>
-                                            <input type="text" name="phone" placeholder="Digite aqui o nome do bairro" required>
+                                            <input type="text" name="neighborhood" id="neighborhood" placeholder="Digite aqui o nome do bairro" required>
                                         </div>
 
                                         <div class="col-lg-12 col-md-6 col-sm-12 form-group">
                                             <label for="">E-mail</label>
-                                            <input type="email" name="email" placeholder="Digite o seu endereço de e-mail" required>
+                                            <input type="email" name="email" id="email" placeholder="Digite o seu endereço de e-mail">
                                         </div>
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                             <label for="">Descreva aqui o seu endereço</label>
-                                            <textarea class="darma" name="message" placeholder="Por exemplo: Bairro Golf 2, nas proximidades da Igreja Simão Tôco, junto da esquadra da polícia...! Seja o mais descritivo possível."></textarea>
+                                            <textarea class="darma" name="message" id="message" placeholder="Por exemplo: Bairro Golf 2, nas proximidades da Igreja Simão Tôco, junto da esquadra da polícia...! Seja o mais descritivo possível." required></textarea>
                                         </div>
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group text-center">
-                                            <button class="theme-btn btn-style-four" type="submit" name="submit-form"><span class="txt">Saber se existe
+                                            <button class="theme-btn btn-style-four" type="submit" name="submit-form" id="submit"><span class="txt">Saber se existe
                                                     cobertura</span></button>
                                         </div>
                                     </div>
                                 </form>
+                                <!-- </form> -->
                             </div>
                         </div>
                         <!-- End Contact Form Box -->
@@ -382,7 +390,7 @@
                         <!-- Form Column -->
                         <div class="form-column col-lg-6 col-md-12 col-sm-12">
                             <div class="inner-column">
-                                <a href="https://api.whatsapp.com/send?phone=244938165179&amp;text=Tenho%20interesse%20em%20aderir%20ao%20serviço%20Happy%20net" target="_blank" class="theme-btn btn-style-five"><span class="txt">Deixar
+                                <a href="https://api.whatsapp.com/send?phone=244938165179&amp;text=Tenho%20interesse%20em%20aderir%20ao%20serviço%20Happy%20net%20|%20LP%20Origin" target="_blank" class="theme-btn btn-style-five"><span class="txt">Deixar
                                         mensagem no whatsapp <i class="lnr lnr-arrow-right"></i></span></a>
                             </div>
                         </div>
@@ -472,7 +480,6 @@
         </div>
     </a>
 
-
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -487,10 +494,10 @@
     <script src="js/nav-tool.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/whatsapp-message-coverage.js"></script>
 
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
 </body>
 
 </html>

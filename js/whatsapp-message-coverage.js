@@ -8,32 +8,27 @@ inputs = [{
         label: 'Nome',
         required: 'required',
         type: 'text',
-        order: '1'
     }, {
         id: 'phone',
         label: 'Telefone',
         required: 'required',
         type: 'text',
-        order: '2'
     }, {
         id: 'county',
         label: 'Município',
         required: 'required',
         type: 'text',
-        order: '3'
     }, {
         id: 'neighborhood',
         label: 'Bairro',
         required: 'required',
         type: 'text',
-        order: '4'
     },
     {
         id: 'email',
         label: 'E-mail',
         required: 'no-required',
         type: 'email',
-        order: '5'
     }
 ];
 
@@ -42,7 +37,6 @@ textareas = [{
         id: 'message',
         label: 'Descrição do endereço',
         required: 'required',
-        order: '6'
     },
 
 ];

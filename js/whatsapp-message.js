@@ -4,48 +4,30 @@ title_form = "Saber se existe cobertura de sinal na minha zona | LP origin";
 
 input = "true";
 inputs = [{
-        id: 'username',
-        label: 'Nome',
-        label_custom: '',
-        placeholder: '',
-        required: 'required',
-        type: 'text',
-        order: '1'
-    }, {
-        id: 'phone',
-        label: 'Telefone',
-        label_custom: '',
-        placeholder: '',
-        required: 'required',
-        type: 'text',
-        order: '2'
-    }, {
-        id: 'county',
-        label: 'Município',
-        label_custom: '',
-        placeholder: '',
-        required: 'required',
-        type: 'text',
-        order: '3'
-    }, {
-        id: 'neighborhood',
-        label: 'Bairro',
-        label_custom: '',
-        placeholder: '',
-        required: 'required',
-        type: 'text',
-        order: '4'
-    },
-    {
-        id: 'email',
-        label: 'E-mail',
-        label_custom: '',
-        placeholder: '',
-        required: 'required',
-        type: 'email',
-        order: '5'
-    }
-];
+    id: 'username',
+    label: 'Nome',
+    label_custom: '',
+    placeholder: '',
+    required: 'required',
+    type: 'text',
+    order: '1'
+}, {
+    id: 'phone',
+    label: 'Telefone',
+    label_custom: '',
+    placeholder: '',
+    required: 'required',
+    type: 'text',
+    order: '2'
+}, {
+    id: 'email',
+    label: 'E-mail',
+    label_custom: '',
+    placeholder: '',
+    required: 'required',
+    type: 'email',
+    order: '5'
+}];
 
 textarea = "true";
 textareas = [{

@@ -26,7 +26,7 @@ inputs = [{
 textarea = "true";
 textareas = [{
         id: 'message',
-        label: 'Descrição do endereço',
+        label: 'Mensagem',
         required: '',
         order: '6'
     },
